@@ -154,4 +154,5 @@ int main()
   secondPolynomial.display();
   thirdPolynomial.display();
   fourthPolynomial.display();
+  return 0;
 }
