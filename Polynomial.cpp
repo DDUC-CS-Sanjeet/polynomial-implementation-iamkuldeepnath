@@ -154,10 +154,5 @@ int main()
   thirdPolynomial.display();
   fourthPolynomial.display();
   
-  thirdPolynomial=firstPolynomial;
-  fourthPolynomial=secondPolynomial;
-  
-  thirdPolynomial.display();
-  fourthPolynomial.display();
   return 0;
 }
