@@ -47,14 +47,13 @@ class Polynomial
 	Polynomial operator - (const Polynomial&);
 	
 	// = operator overloading
-	Polynomial operator = (int)
+	Polynomial &operator = (const Polynomial &p1)
 	{
-		Polynomial temp1(size-1);
-		
-		for(int i=0;i<size;i++)
-			temp1.arr[i] = arr[i];
+		size = p1.size;
+		for(int i=0;i<p1.size;i++)
+			arr[i] = p1.arr[i];
 					
-		return temp1;
+		return *this;
 	}
 	
     void storePolynomial()
@@ -152,6 +151,12 @@ int main()
   //Displaying all the polynomials
   firstPolynomial.display();
   secondPolynomial.display();
+  thirdPolynomial.display();
+  fourthPolynomial.display();
+  
+  thirdPolynomial=firstPolynomial;
+  fourthPolynomial=secondPolynomial;
+  
   thirdPolynomial.display();
   fourthPolynomial.display();
   return 0;
